@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 3) do
 
-  create_table "costume", force: :cascade do |t|
-    t.string "name"
-    t.integer "price"
-    t.integer "size"
-    t.string "imageurl"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "costume_stores", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -29,6 +20,15 @@ ActiveRecord::Schema.define(version: 3) do
     t.boolean "still_in_business"
     t.datetime "opening_time"
     t.datetime "closing_time"
+  end
+
+  create_table "costumes", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.string "image_url"
+    t.string "size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "haunted_houses", force: :cascade do |t|
